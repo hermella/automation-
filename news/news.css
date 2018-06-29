@@ -1,0 +1,15 @@
+body{
+    padding: 1%;
+}
+
+#news0, #news1{
+    width: 20%;
+    height: 30%;
+    border: 2px black solid;
+    
+}
+
+.description{
+    height: 35%;
+   
+}

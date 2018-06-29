@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="news.css">
+    <script>
+    function createDiv(){
+                var block_to_insert ;
+                var x = 1;
+                var title = document.getElementById("title").value;
+                var description = document.getElementById("description").value;
+
+                block_to_insert = document.createElement( 'div' );
+                block_to_insert.id = "news" + x;
+                var div = document.createElement('div');
+                var div1 = document.createElement('div');
+                var titleToDiv = document.createTextNode(title);
+                var descriptionToDiv = document.createTextNode(description);
+
+                
+                console.log("Desc; "+description)
+                div.innerHTML= title;
+                div1.innerHTML = description;
+
+                block_to_insert.appendChild(div);
+
+                
+                block_to_insert.appendChild(div1);
+
+                document.body.appendChild(block_to_insert);
+                x++;
+            }
+            
+    </script>
+</head>
+
+    <body>
+           
+        
+            Title <br>
+            <input type="text" name="title" id="title">
+            <br>
+            
+            Description<br>
+            <textarea name="description" style="width:300px; height:150px;" id="description"></textarea>
+            <br><br>
+            <button onclick="createDiv()">Submit</button>     
+    </body>
+
+</html>

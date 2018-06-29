@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="news.css">
+
+        <script>
+            /**function processUser()
+                {
+                    var parameters = location.search.substring(1).split("&");
+
+                    var temp = parameters[0].split("=");
+                    l = unescape(temp[1]);
+                    temp = parameters[1].split("=");
+                    p = unescape(temp[1]);
+                    document.getElementsByClassName("title").innerHTML = l;
+                    document.getElementsByClassName("description").innerHTML = p;
+                    console.log(l)
+                }**/
+
+            function processUser(){
+                
+            }
+
+
+            function createDiv(){
+                var block_to_insert ;
+                var x = 1;
+                block_to_insert = document.createElement( 'div' );
+                block_to_insert.id = "news" + x;
+                var div = document.createElement('div');
+                var div1 = document.createElement('div');
+                block_to_insert.appendChild(div);
+                
+                block_to_insert.appendChild(div1);
+
+                document.body.appendChild(block_to_insert);
+                x++;
+                processUser();
+            }
+            
+        </script>
+    </head>
+
+    <body>
+
+        <div>
+            <h1>THIS IS A NEWS PAGE</h1>
+        </div>
+
+        <div id="news0">
+    
+            <div class="title" >
+                   
+            </div>
+
+            <div class="description" >
+                   
+            </div>
+        </div>    
+        <button onclick="createDiv()">submit</button>
+    </body>
+</html>
